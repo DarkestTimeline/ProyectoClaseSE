@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>se4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Crear un boto para obtener la data en consola -->
+  <ion-button (click)="onClick()" expand="block">
+    Uso de data service
+  </ion-button>
+
+  <!-- Crear lista par mostar los datos -->
+  <ion-list>
+    <ion-item *ngFor="let usuario of usuarios | async">
+      <ion-label>
+        <h3>{{usuario.username}}</h3>
+      </ion-label>
+      <ion-label>
+        <h5>{{usuario.name}}</h5>
+      </ion-label>
+      <ion-label>
+        <h5>{{usuario.email}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

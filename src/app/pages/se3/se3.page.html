@@ -1,0 +1,75 @@
+<ion-header>
+  <app-header>
+    <ion-back-button></ion-back-button>
+  </app-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Pagina Sistemas Expertos 3</h3>
+
+  <!-- Elemento iChip-->
+  <ion-chip color="primary" outline="true">
+    <!-- Agregar avatar-->
+    <ion-avatar>
+      <img src="/assets/Unah_Puma.jpg" />
+    </ion-avatar>
+    <ion-label>Elemento Ion-Chip</ion-label>
+  </ion-chip>
+
+  <!-- Crear una lista de avatars -->
+  <h3>Lista de Avatars</h3>
+  <ion-list>
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1]">
+      <ion-avatar slot="start">
+        <img src="/assets/Unah_Puma.jpg" />
+      </ion-avatar>
+      <ion-label>Avatars</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Crear Ion Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Titulo - Sistemas Expertos</ion-card-title>
+      <ion-card-subtitle>Subtitulo - Tarjeta personalizada</ion-card-subtitle>
+    </ion-card-header>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Crear Ion Card -->
+  <ion-card>
+    <ion-item color="primary">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Card Item</ion-label>
+    </ion-item>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Crear Ion Card -->
+  <ion-card>
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Card Imagen</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+  </ion-card>
+</ion-content>
