@@ -1,0 +1,103 @@
+<ion-header>
+  <app-header>
+    <ion-back-button></ion-back-button>
+  </app-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Card #1-->
+  <ion-card>
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Card Imagen #1</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickMostrar2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickMostrar3()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card #2-->
+  <ion-card *ngIf="isVisible2">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Card Imagen #2</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickSi2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card #3-->
+  <ion-card *ngIf="isVisible3">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Card Imagen #3</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
+      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
+      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
+      architecto perferendis?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickSi2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+</ion-content>

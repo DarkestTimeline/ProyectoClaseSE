@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'se4',
     loadChildren: () => import('./pages/se4/se4.module').then( m => m.Se4PageModule)
   },
+  {
+    path: 'ab',
+    loadChildren: () => import('./pages/ab/ab.module').then( m => m.AbPageModule)
+  },
 ];
 
 @NgModule({

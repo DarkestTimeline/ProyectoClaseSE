@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Se4PageRoutingModule } from './se4-routing.module';
+import { AbPageRoutingModule } from './ab-routing.module';
 
-import { Se4Page } from './se4.page';
-
+import { AbPage } from './ab.page';
+import { ComponenteModule } from '../../componente/componente.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Se4PageRoutingModule
+    AbPageRoutingModule,
+    ComponenteModule
   ],
-  declarations: [Se4Page]
+  declarations: [AbPage]
 })
-export class Se4PageModule {}
+export class AbPageModule {}

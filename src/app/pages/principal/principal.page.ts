@@ -14,20 +14,24 @@ export class PrincipalPage implements OnInit {
 
   // Crear la funcion onClickSE1()
   onClickSE1(){
-    console.log("Navegando a pagina SE1")
+    console.log('Navegando a pagina SE1');
   }
 
   // Crear la funcion onClickSE2()
   onClickSE2(){
-    console.log("Navegando a pagina SE2")
+    console.log('Navegando a pagina SE2');
   }
 
   // Crear la funcion onClickSE2()
   onClickSE3(){
-    console.log("Navegando a pagina SE3")
+    console.log('Navegando a pagina SE3');
 }
 // Crear la funcion onClickSE2()
 onClickSE4(){
-  console.log("Navegando a pagina SE4")
+  console.log('avegando a pagina SE4');
+}
+
+onClickAB(){
+  console.log('Navegando a pagina Arbol Binario');
 }
 }
