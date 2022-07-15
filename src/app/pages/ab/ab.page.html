@@ -9,7 +9,7 @@
   <ion-card>
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen #1</ion-label>
+      <ion-label>Card Imagen 1</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
@@ -37,11 +37,11 @@
     </ion-button>
   </ion-card>
 
-  <!-- Card #2-->
-  <ion-card *ngIf="isVisible2">
+  <!-- Card #2.1-->
+  <ion-card *ngIf="isVisible21">
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen #2</ion-label>
+      <ion-label>Card Imagen 2.1</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
@@ -69,11 +69,11 @@
     </ion-button>
   </ion-card>
 
-  <!-- Card #3-->
-  <ion-card *ngIf="isVisible3">
+  <!-- Card #2.2-->
+  <ion-card *ngIf="isVisible22">
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen #3</ion-label>
+      <ion-label>Card Imagen 2.2</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
@@ -100,4 +100,10 @@
       No
     </ion-button>
   </ion-card>
+
+  <br />
+
+  <ion-button expand="full" color="success" (click)="presentAlertConfirm()">
+    He solucionado mi problema!
+  </ion-button>
 </ion-content>
