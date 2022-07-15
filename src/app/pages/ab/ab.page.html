@@ -5,19 +5,25 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <h2 style="text-align: center">
+    ¡Acabo de ensamblar mi PC, pero no enciende!
+  </h2>
+  <h5 style="text-align: center">
+    Si acabas de ensamblar tu PC pero esta no enciende, sigue esta guía para
+    poder diagnosticar tu sistema e identificar problemas de software o
+    hardware.
+  </h5>
+  <br />
   <!-- Card #1-->
   <ion-card>
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen 1</ion-label>
+      <ion-label>¡Comencemos! </ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
-      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
-      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
-      architecto perferendis?
+      ¿Qué sucede al presionar el botón de encendido?
     </ion-card-content>
     <ion-button
       (click)="onClickMostrar2()"
@@ -25,34 +31,35 @@
       fill="clear"
       shape="round"
     >
-      Si
+      No sucede nada
     </ion-button>
     <ion-button
-      (click)="onClickMostrar3()"
+      (click)="onClickMostrar4()"
       expand="block"
       fill="clear"
       shape="round"
     >
-      No
+      Mi PC enciende pero no muestra una imagen
     </ion-button>
   </ion-card>
 
-  <!-- Card #2.1-->
-  <ion-card *ngIf="isVisible21">
+  <!-- Card 2-->
+  <ion-card *ngIf="isVisible2">
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen 2.1</ion-label>
+      <ion-label>Alimentación y Switch de PSU</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt
-      repellendus ipsum libero rem beatae modi. Fuga nobis alias nisi porro
-      perspiciatis dignissimos, provident maiores voluptates soluta repellendus
-      architecto perferendis?
+      Si presionas el botón de encendido, pero no sucede nada en tu PC, primero
+      debes asegurarte que esta se encuentra conectada a una toma de corriente y
+      que el switch de tu PSU se encuentre en posición de encendido.
+      <br /><br />
+      ¿Esto soluciono tu problema?
     </ion-card-content>
     <ion-button
-      (click)="onClickSi2()"
+      (click)="presentAlertConfirm()"
       expand="block"
       fill="clear"
       shape="round"
@@ -69,11 +76,371 @@
     </ion-button>
   </ion-card>
 
-  <!-- Card #2.2-->
-  <ion-card *ngIf="isVisible22">
+  <!-- Card 3-->
+  <ion-card *ngIf="isVisible3">
     <ion-item color="danger">
       <ion-icon slot="end" name="bicycle-outline"></ion-icon>
-      <ion-label>Card Imagen 2.2</ion-label>
+      <ion-label>Conexiones de Motherboard</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si tu PC se encuentra conectada a una toma de corriente y el switch de tu
+      PSU se encuentra en posición de encendido, revisa que las conexiones en tu
+      motherboard se encuentran en las posiciones correctas. Algunos ejemplos de
+      ellas son: los pines de alimentación, los pines de los botones frontales,
+      y los pines de alimentación de tu CPU.
+      <br />
+      Para información con mas detalle debes referirte al manual de tu
+      motherboard para verificar que las conexiones estén correctas.
+      <br /><br />
+      ¿Esto soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="presentAlertConfirm()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickRam()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 4-->
+  <ion-card *ngIf="isVisible4">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Salida de Video</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si tu PC enciende, pero esta no muestra una imagen (o solamente una
+      pantalla en negro) es posible que la salida de video de tu equipo no sea
+      la correcta. Primero deberemos identificar que tipo de tarjeta grafica se
+      encuentra instalada en tu PC.
+      <br />
+      Las tarjetas integradas son aquellas que vienen incluidas en tu
+      procesador, aunque no todos los procesadores modernos cuentan con ellas.
+      Las tarjetas dedicadas son aquellas que se instalan de forma adicional,
+      por lo general son de la marca Nvidia o AMD. Si no estas seguro si tu
+      procesador incluye una tarjeta de video integrada puedes referirte a las
+      especificaciones de tu procesador.
+      <br /><br />¿Tu PC cuenta con una tarjeta de video integrada o solamente
+      cuenta con una tarjeta de video integrada en su procesador?
+    </ion-card-content>
+    <ion-button (click)="onClickTI()" expand="block" fill="clear" shape="round">
+      Solamente tarjeta integrada
+    </ion-button>
+    <ion-button (click)="onClickTD()" expand="block" fill="clear" shape="round">
+      Tarjeta integrada y tarjeta dedicada
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 5-->
+  <ion-card *ngIf="isVisible5">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Tarjeta Integrada</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si el procesador de tu PC solamente cuenta con una tarjeta integrada,
+      asegúrate de utilizar un cable HDMI, VGA o DisplayPort que ha sido probado
+      en otra PC para verificar que este se encuentra funcionando. Y asegúrate
+      que el monitor se encuentre configurado para el modo de salida correcto.
+      También es recomendable que pruebes distintos cables de video.
+      <br /><br />
+      ¿Esto soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="presentAlertConfirm()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo56()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 6-->
+  <ion-card *ngIf="isVisible6">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Tarjeta Dedicada</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si tu PC cuenta con una tarjeta integrada y también con una dedicada, es
+      recomendable que conectes tu cable de video a los puertos de la tarjeta
+      dedicada (por lo general ubicados en la parte inferior) en lugar de los
+      puertos de tu motherboard. Sin embargo, si conectar el cable de video a la
+      tarjeta grafica no soluciona el problema, puedes intentar conectarte a los
+      puertos de la tarjeta integrada que se encuentran en tu motherboard. En
+      caso de que utilizar los puertos de tu tarjeta dedicada no funcione, es
+      posible que requieras reemplazar tu tarjeta gráfica. Y asegúrate que el
+      monitor se encuentre configurado para el modo de salida correcto. También
+      es recomendable que pruebes distintos cables de video. <br /><br />¿Esto
+      soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="presentAlertConfirm()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo56()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 7-->
+  <ion-card *ngIf="isVisible7">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Sonidos o Imagen al Iniciar</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Este paso nos ayudara a continuar con el proceso de diagnóstico. ¿cuándo
+      tu PC enciende, escuchas algún sonido proveniente de la motherboard? ¿O
+      ves alguna imagen con fondo negro y texto blanco en la pantalla?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickRam()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Sonidos
+    </ion-button>
+    <ion-button
+      (click)="onClickBios()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Fondo negro con texto blanco
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 8-->
+  <ion-card *ngIf="isVisible8">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Memoria RAM</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si escuchas una serie de sonidos al momento de iniciar tu PC pero esta no
+      enciende, es posible que el sonido que escuches sea un código de error. La
+      secuencia de los sonidos indica la posible causa del fallo, el más común
+      de ellos es una serie de sonidos que se repite constantemente; este por lo
+      general indica que la memoria RAM de tu PC esta mal colocada o esta ya no
+      funciona. Por lo tanto, debes remover la RAM y volverla a colocar,
+      asegurándote que esta se encuentre firmemente posicionada; si esto no
+      ayuda es posible que necesites reemplazar la memoria RAM de tu PC.
+      <br />Si escuchas una serie de sonidos distinta, refiérete al manual de tu
+      motherboard para más información. <br /><br />¿Esto soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickSi2()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="presentAlertSorry()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 9-->
+  <ion-card *ngIf="isVisible9">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>BIOS</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      El BIOS (Basic Input/Output System) es el firmware más básico de la PC y
+      este se encuentra en la motherboard de tu PC; este permite contralar
+      muchas de las opciones más esenciales de ella. El BIOS por lo general no
+      posee una interfaz muy atractiva y aunque este difiere entre cada marca,
+      es posible que este sea una interfaz solamente de texto o con muy pocas
+      imágenes o atractivo visual. La buena noticia es que, si tu PC puede
+      ingresar al BIOS, ¡estamos en la ruta correcta!<br /><br />
+      ¿Puedes acceder al BIOS de tu PC?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickSi9()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo9()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 10-->
+  <ion-card *ngIf="isVisible10">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Ingresar al BIOS</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si no ves el BIOS de tu PC, es posible que necesites presionar una tecla
+      especifica para acceder a él. Aunque este es distinto entre cada marca de
+      fabricante, las teclas más comunes son: F10, F2, F12, F1, o DEL.
+      <br /><br />
+      ¿Has logrado ingresar al BIOS de tu PC?
+    </ion-card-content>
+    <ion-button
+      (click)="onClickSi10()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="presentAlertSorry()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 11-->
+  <ion-card *ngIf="isVisible11">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Discos de Arranque</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Dentro del BIOS, debemos asegurarnos que nuestros discos o dispositivos de
+      arranque se encuentren configurados correctamente y concuerden con los
+      dispositivos que hemos instalado en nuestra PC. Si has instalado mas de un
+      SSD/HDD en tu PC, asegúrate que el que deseas utilizar como dispositivo
+      para iniciar tu sistema sea el que se encuentra configurado como primera
+      opción.
+      <br /><br />
+      ¿Esto soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="presentAlertConfirm()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="onClickNo11()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 12-->
+  <ion-card *ngIf="isVisible12">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Sistema Operativo</ion-label>
+    </ion-item>
+    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <!-- Crear Contenido -->
+    <ion-card-content>
+      Si los dispositivos de arranque se encuentran configurados de forma
+      correcta pero tu PC aun no muestra una interfaz para utilizar, es muy
+      posible que tu PC aun no cuente con un sistema operativo instalado. Los
+      HDD/SSD nuevos no contienen ninguna información en ellos, esto significa
+      que no poseen un sistema operativo para arrancar tu PC y es necesario
+      hacerlo de forma manual.
+      <br />Si tu PC aun no cuenta con un sistema operativo, te recomendamos
+      hacer la instalación del sistema operativo de Windows. Aunque este
+      requiere una licencia, se puede instalar de forma gratuita y realizar la
+      activación de la licencia de forma posterior. En el siguiente enlace
+      encontraras una guía para realizar dicha instalación:
+      <a>https://www.tomsguide.com/how-to/how-to-install-windows-10</a>
+      <br />Sin embargo, también puedes optar por otras alternativas totalmente
+      gratuitas como alguna distribución del sistema operativo Linux.
+      <br /><br />¿Esto soluciono tu problema?
+    </ion-card-content>
+    <ion-button
+      (click)="presentAlertConfirm()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      Si
+    </ion-button>
+    <ion-button
+      (click)="presentAlertSorry()"
+      expand="block"
+      fill="clear"
+      shape="round"
+    >
+      No
+    </ion-button>
+  </ion-card>
+
+  <!-- Card 13-->
+  <ion-card *ngIf="isVisible13">
+    <ion-item color="danger">
+      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+      <ion-label>Sistema Operativo</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
     <!-- Crear Contenido -->
