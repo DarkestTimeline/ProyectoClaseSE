@@ -16,11 +16,11 @@
   <br />
   <!-- Card #1-->
   <ion-card>
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="rocket-sharp"></ion-icon>
       <ion-label>¡Comencemos! </ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/intro.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       ¿Qué sucede al presionar el botón de encendido?
@@ -45,11 +45,11 @@
 
   <!-- Card 2-->
   <ion-card *ngIf="isVisible2">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="power-sharp"></ion-icon>
       <ion-label>Alimentación y Switch de PSU</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/psu.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si presionas el botón de encendido, pero no sucede nada en tu PC, primero
@@ -78,11 +78,11 @@
 
   <!-- Card 3-->
   <ion-card *ngIf="isVisible3">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="link-sharp"></ion-icon>
       <ion-label>Conexiones de Motherboard</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/mobo.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si tu PC se encuentra conectada a una toma de corriente y el switch de tu
@@ -116,11 +116,11 @@
 
   <!-- Card 4-->
   <ion-card *ngIf="isVisible4">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="images-sharp"></ion-icon>
       <ion-label>Salida de Video</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/outputs.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si tu PC enciende, pero esta no muestra una imagen (o solamente una
@@ -147,11 +147,11 @@
 
   <!-- Card 5-->
   <ion-card *ngIf="isVisible5">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="hardware-chip-sharp"></ion-icon>
       <ion-label>Tarjeta Integrada</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/ti.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si el procesador de tu PC solamente cuenta con una tarjeta integrada,
@@ -182,11 +182,11 @@
 
   <!-- Card 6-->
   <ion-card *ngIf="isVisible6">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="hardware-chip-sharp"></ion-icon>
       <ion-label>Tarjeta Dedicada</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/td.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si tu PC cuenta con una tarjeta integrada y también con una dedicada, es
@@ -221,11 +221,11 @@
 
   <!-- Card 7-->
   <ion-card *ngIf="isVisible7">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="volume-high-sharp"></ion-icon>
       <ion-label>Sonidos o Imagen al Iniciar</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/boot.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Este paso nos ayudara a continuar con el proceso de diagnóstico. ¿cuándo
@@ -252,11 +252,11 @@
 
   <!-- Card 8-->
   <ion-card *ngIf="isVisible8">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="barcode-sharp"></ion-icon>
       <ion-label>Memoria RAM</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/ram.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si escuchas una serie de sonidos al momento de iniciar tu PC pero esta no
@@ -271,7 +271,7 @@
       motherboard para más información. <br /><br />¿Esto soluciono tu problema?
     </ion-card-content>
     <ion-button
-      (click)="onClickSi2()"
+      (click)="presentAlertConfirm()"
       expand="block"
       fill="clear"
       shape="round"
@@ -290,11 +290,11 @@
 
   <!-- Card 9-->
   <ion-card *ngIf="isVisible9">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="cash-sharp"></ion-icon>
       <ion-label>BIOS</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/bios.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       El BIOS (Basic Input/Output System) es el firmware más básico de la PC y
@@ -326,11 +326,11 @@
 
   <!-- Card 10-->
   <ion-card *ngIf="isVisible10">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="cog-sharp"></ion-icon>
       <ion-label>Ingresar al BIOS</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/bioskey.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si no ves el BIOS de tu PC, es posible que necesites presionar una tecla
@@ -359,11 +359,11 @@
 
   <!-- Card 11-->
   <ion-card *ngIf="isVisible11">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="play-circle-sharp"></ion-icon>
       <ion-label>Discos de Arranque</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/btdrives.png"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Dentro del BIOS, debemos asegurarnos que nuestros discos o dispositivos de
@@ -395,11 +395,11 @@
 
   <!-- Card 12-->
   <ion-card *ngIf="isVisible12">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="grid-sharp"></ion-icon>
       <ion-label>Sistema Operativo</ion-label>
     </ion-item>
-    <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
+    <ion-img src="/assets/os.jpg"></ion-img>
     <!-- Crear Contenido -->
     <ion-card-content>
       Si los dispositivos de arranque se encuentran configurados de forma
@@ -438,8 +438,8 @@
 
   <!-- Card 13-->
   <ion-card *ngIf="isVisible13">
-    <ion-item color="danger">
-      <ion-icon slot="end" name="bicycle-outline"></ion-icon>
+    <ion-item color="tertiary">
+      <ion-icon slot="end" name="grid-sharp"></ion-icon>
       <ion-label>Sistema Operativo</ion-label>
     </ion-item>
     <ion-img src="/assets/GoldeGate_SF.jpg"></ion-img>
